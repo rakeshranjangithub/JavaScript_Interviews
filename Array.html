@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<sc>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let a = [
+        [
+          { id: 1, text: "data1" },
+          { id: 2, text: "data2" },
+        ],
+        [{ id: 3, text: "data3" }],
+        [{ id: 4, text: "data4" }],
+      ];
+      console.log(a[0][0].id);
+
+      function Person(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+      }
+
+      const lydia = new Person("Lydia", "Hallie");
+      const sarah = Person("Sarah", "Smith");
+
+      console.log(lydia);
+      console.log(firstName);
+      console.log(lastName);
+
+      function getPersonInfo(one, two, three) {
+        console.log(one);
+        console.log(two);
+        console.log(three);
+      }
+
+      const person = "Lydia";
+      const age = 21;
+
+      getPersonInfo`${person} is ${age} years old`;
+
+      function getAge(...args) {
+        console.log(typeof args);
+      }
+
+      getAge(21);
+
+      function getAgee() {
+        agee = 21;
+        console.log(agee);
+      }
+
+      getAgee();
+
+      const sum = eval("10*10+5");
+      console.log(sum);
+    </script>
+  </body>
+</html>

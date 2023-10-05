@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let text1 = "rakesh";
+      let text2 = "ranjanesh";
+      var longestCommonSubsequence = function (text1, text2) {
+        const table = Array.from({ length: text1.length + 1 }, () =>
+          new Array(text2.length + 1).fill("")
+        );
+        // let i = 1;
+        // const table = Array.from({ length: text1.length + 1 }, () =>
+        //   new Array(text2.length + 1).fill(i++)
+        // );
+        // console.log(table.length);
+        console.log(table);
+        for (let i = 1; i < table.length; i++) {
+          for (let j = 1; j < table[i].length; j++) {
+            if (text1[i - 1] === text2[j - 1]) {
+              table[i][j] = table[i - 1][j - 1] + text1[i - 1];
+            } else {
+              let aboveChar = table[i - 1][j];
+              let leftChar = table[i][j - 1];
+
+              table[i][j] =
+                aboveChar.length > leftChar.length ? aboveChar : leftChar;
+            }
+          }
+        }
+        return table[table.length - 1][table[0].length - 1].length;
+      };
+      let result = longestCommonSubsequence(text1, text2);
+      console.log(result);
+    </script>
+  </body>
+</html>

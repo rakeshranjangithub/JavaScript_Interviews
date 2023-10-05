@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let Array = [200, 8, 9, 30, 4, 10, 6, 24, 23, 25];
+      let max = Array[0];
+      let SL = Array[1];
+
+      for (var i = 1; i < Array.length; i++) {
+        if (max < Array[i]) {
+          SL = max;
+          max = Array[i];
+        } else if (SL < Array[i]) {
+          SL = Array[i];
+        }
+      }
+      console.log(max);
+      console.log(SL);
+
+      let newstr = "";
+      let arr = "";
+      let str = "ab brown fox jspider ";
+      //   o/p = "jspiders fox brown ab"
+      for (let i = 0; i <= str.length - 1; i++) {
+        if (str[i] !== " ") {
+          newstr += str[i];
+        } else {
+          arr = newstr + " " + arr;
+          newstr = "";
+        }
+      }
+      console.log(arr);
+    </script>
+  </body>
+</html>

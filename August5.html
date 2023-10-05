@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="first" type="number" placeholder="Enter first input" />
+    <input id="secound" type="number" placeholder="Enter secound input" />
+    <h2 id="result"></h2>
+    <button onclick="addHandler()">Add</button>
+    <button onclick="substractHandler()">Substract</button>
+    <button onclick="multiplyHandler()">Multiply</button>
+    <button onclick="divideHandler()">Divide</button>
+
+    <script>
+      // Calculator
+
+      function addHandler() {
+        let value1 = document.querySelector("#first").value;
+        let value2 = document.querySelector("#secound").value;
+        let result = document.querySelector("#result");
+        let value = Number(value1) + Number(value2);
+        result.innerHTML = value;
+      }
+      function substractHandler() {
+        let value1 = document.querySelector("#first").value;
+        let value2 = document.querySelector("#secound").value;
+        let result = document.querySelector("#result");
+        let value;
+        value = Number(value1) - Number(value2);
+        result.innerHTML = value;
+      }
+      function multiplyHandler() {
+        let value1 = document.querySelector("#first").value;
+        let value2 = document.querySelector("#secound").value;
+        let result = document.querySelector("#result");
+        let value;
+        value = Number(value1) * Number(value2);
+        result.innerHTML = value;
+      }
+      function divideHandler() {
+        let value1 = document.querySelector("#first").value;
+        let value2 = document.querySelector("#secound").value;
+        let result = document.querySelector("#result");
+        let value;
+        value = Number(value1) / Number(value2);
+        result.innerHTML = value;
+      }
+
+      let array = [10, 2, 34, 45, 677, 1000, 76655];
+      let max1 = array[0];
+      let max2 = array[1];
+      //   for (let i = 0; i < array.length; i++) {
+      //     if (array[i] > max) {
+      //       max = array[i];
+      //     }
+      //   }
+      for (let a of array) {
+        if (a > max1) {
+          max1 = a;
+        }
+        if (max2 < max1 && a > max2) {
+          max2 = a;
+        }
+      }
+      //   console.log(max1);
+      //   console.log(max2);
+
+      let obj = [
+        { name: "rakesh", marks: 90, age: 28 },
+        { name: "mukesh", marks: 80, age: 28 },
+        { name: "santosh", marks: 95, age: 22 },
+      ];
+      let newArr = obj.map((ele) => {
+        return { ...ele, marks: ele.marks + 5 };
+      });
+      console.log(newArr);
+
+      for (let a of obj) {
+        console.log({ ...a, marks: a.marks + 5 });
+      }
+      console.log(obj);
+    </script>
+  </body>
+</html>

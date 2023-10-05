@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <script>
+      // COnvert to Crazy String
+
+      // let strr = "chandrayan ";
+      // let newstr = "";
+      // for (let i = 0; i <= strr.length - 1; i++) {
+      //   if (i % 2 === 0) {
+      //     newstr += String.fromCharCode(strr[i].charCodeAt() - 32);
+      //   } else {
+      //     newstr += strr[i];
+      //   }
+      // }
+      // console.log(newstr);
+
+      //Input-Practice makes man perfect
+      //output-perfect man makes practice
+
+      // let str = "Practice makes man perfect ";
+      // let nstr = "";
+      // let output = "";
+      // for (let i = 0; i <= str.length; i++) {
+      //   if (str[i] !== " ") {
+      //     nstr += str[i];
+      //   } else {
+      //     output = nstr + " " + output;
+      //     nstr = "";
+      //   }
+      // }
+      // console.log(output);
+
+      //Input-Practice makes man perfect
+      //output-ecitcarP sekam nam tcefrep
+
+      // let str1 = "Practice makes man perfect ";
+      // let word = "";
+      // let output1 = "";
+      // for (let i = 0; i <= str1.length; i++) {
+      //   if (str1[i] !== " ") {
+      //     word = str1[i] + word;
+      //   } else {
+      //     output1 = output1 + " " + word;
+      //     word = "";
+      //   }
+      // }
+      // console.log(output1);
+
+      //Reverse of string
+
+      // let st = "hello world";
+      // let nwst = "";
+      // for (let i = 0; i < st.length; i++) {
+      //   nwst = st[i] + nwst;
+      // }
+      // console.log(nwst);
+
+      //Palindrome
+
+      // let st = "mom";
+      // let nwst = "";
+      // for (let i = 0; i < st.length; i++) {
+      //   nwst = st[i] + nwst;
+      // }
+      // if (st === nwst) console.log("palindome");
+      // else console.log("not palindrome");
+
+      // let st = "abcdfdcba";
+      // let flag = true;
+      // for (let i = 0; i < Math.trunc(st.length / 2); i++) {
+      //   if (st[i] !== st[st.length - i - 1]) {
+      //     flag = false;
+      //   }
+      // }
+      // if (flag) console.log("palindome");
+      // else console.log("not palindrome");
+
+      //Anagram
+
+      // function CleanString(str) {
+      //   return str.replace(/[^\w]/g, "").toLowerCase().split("").sort().join();
+      // }
+      // function Anagrams(s1, s2) {
+      //   return CleanString(s1) === CleanString(s2);
+      // }
+      // const result = Anagrams("Rail safety!!", "fairy tales");
+      // console.log("result", result);
+
+      // function isAnagram(s, t) {
+      //   if (s.length !== t.length) return false;
+      //   let obj1 = {};
+      //   let obj2 = {};
+      //   for (let i = 0; i < s.length; i++) {
+      //     obj1[s[i]] = (obj1[s[i]] || 0) + 1;
+      //     obj2[t[i]] = (obj2[t[i]] || 0) + 1;
+      //   }
+      //   console.log(obj1, obj2);
+      //   for (const key in obj1) {
+      //     if (obj1[key] !== obj2[key]) return false;
+      //   }
+      //   return true;
+      // }
+      // console.log(isAnagram("anagram", "nagaram"));
+
+      // let s = "rakeshranjan";
+      // let ob = {};
+      // for (let a of s) {
+      //   if (ob[a]) {
+      //     ob[a]++;
+      //   } else {
+      //     ob[a] = 1;
+      //   }
+      // }
+      // console.log(ob);
+      // const a = {};
+      // const b = { key: "b" };
+      // const c = { key: "c" };
+
+      // a[b] = 123;
+      // console.log(a);
+      // a[c] = 456;
+      // console.log(a);
+      // console.log(a[b]);
+      // console.log(a[c]);
+
+      [
+        [0, 1],
+        [2, 3],
+      ].reduce(
+        (acc, cur) => {
+          return acc.concat(cur);
+        },
+        [1, 2]
+      );
+      let person = { name: "Lydia" };
+      const members = [person];
+      person = null;
+
+      console.log(members);
+    </script>
+  </body>
+</html>
